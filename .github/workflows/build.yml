@@ -19,7 +19,7 @@ jobs:
     # GitHub's Xcode 27 image: the build needs Xcode 27 or newer (the iOS 27 SDK) and fails without it.
     # Override without a code change: gh variable set MACOS_RUNNER --body <label>
     runs-on: ${{ vars.MACOS_RUNNER || 'xcode-27' }}
-    timeout-minutes: 45
+    timeout-minutes: 90
     steps:
       # Not actions/checkout: it logs "HEAD is now at <sha> <commit subject>", and this log is public.
       - name: Check out the source
